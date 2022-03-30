@@ -1,0 +1,1 @@
+ALTER DATABASE sampleDBWojciechKosztyla SET PARTNER = 'TCP://127.0.0.1:7022'

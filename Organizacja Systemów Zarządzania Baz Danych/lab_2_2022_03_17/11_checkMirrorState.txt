@@ -1,0 +1,11 @@
+SELECT	db_name(sd.[database_id])		AS [Database Name]
+	,sd.mirroring_state			AS [Mirror State]
+	,sd.mirroring_state_desc		AS [Mirror State] 
+	,sd.mirroring_safety_level_desc		AS [Mirror Safety]
+	,sd.mirroring_partner_name		AS [Partner Name]
+	,sd.mirroring_role_desc			AS [Mirror Role]
+	,sd.mirroring_safety_level_desc		AS [Safety Level]
+	,sd.mirroring_connection_timeout	AS [Timeout(sec)]
+FROM sys.database_mirroring AS sd
+WHERE mirroring_guid IS NOT null
+ORDER BY [Database Name];

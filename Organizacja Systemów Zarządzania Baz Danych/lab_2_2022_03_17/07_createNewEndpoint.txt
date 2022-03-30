@@ -1,0 +1,5 @@
+CREATE ENDPOINT Endpoint_MirroringWojciechKosztyla   
+STATE = STARTED   
+AS TCP (LISTENER_PORT = 7023)  
+FOR database_mirroring (ROLE = PARTNER);  
+GO

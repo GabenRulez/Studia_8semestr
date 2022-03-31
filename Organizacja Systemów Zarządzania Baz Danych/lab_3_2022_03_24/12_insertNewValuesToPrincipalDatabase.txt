@@ -1,0 +1,3 @@
+INSERT INTO sampleTab VALUES (99);
+INSERT INTO sampleTab VALUES (69);
+INSERT INTO sampleTab VALUES (420);

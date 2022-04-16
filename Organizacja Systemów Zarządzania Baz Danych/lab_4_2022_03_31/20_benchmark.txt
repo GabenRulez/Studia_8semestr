@@ -1,0 +1,13 @@
+declare @t datetime = getdate()
+
+declare @i int = 0
+declare @limit int = 1000
+
+while @i < @limit
+begin
+    insert into sampleTab values(@i)
+	delete from sampleTab where sampleTab.VAL = @i
+    set @i = @i + 1
+end
+
+select DATEDIFF(MILLISECOND, @t, GETDATE()) as "Time Length (ms)"
